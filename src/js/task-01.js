@@ -1,6 +1,7 @@
 const catigoriesOfAnimals = document.querySelector('#categories');
 const listOfAnimalsRef = catigoriesOfAnimals.children.length;
 console.log(`Numbers of categories: ${listOfAnimalsRef}`);
+
 const itemOfAnimalsRef = document.querySelectorAll('.item > h2');
 const firstItemEl = itemOfAnimalsRef[0].textContent;
 const secondItemEl = itemOfAnimalsRef[1].textContent;
@@ -19,6 +20,8 @@ console.log(`Category: ${firstItemEl} \n Elements: ${fisrtElAnimals}
     
 //     console.log(`Category: ${item.textContent} \n Elements: ${elementsOfItemAnimalsRef} `)
 //  })
+ 
+ 
 
 
 
