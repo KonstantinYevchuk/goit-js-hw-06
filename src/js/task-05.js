@@ -1,0 +1,12 @@
+const inputEl = document.querySelector('#name-input');
+const outputEl = document.querySelector('#name-output');
+console.log(inputEl)
+console.log(outputEl)
+
+
+inputEl.addEventListener("input", (event) => {
+    if (event.currentTarget.value === "") {
+       return outputEl.textContent = "Anomnius" 
+    }
+    outputEl.textContent = event.currentTarget.value;
+} )
