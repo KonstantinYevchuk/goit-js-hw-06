@@ -13,12 +13,15 @@ const images = [
   },
 ];
 const listGallery = document.querySelector('.gallery')
+// listGallery.style.listStyle = 'none';
 const imagesEl = images
-.map(image => `<li class="list_item"> <img url='${image.url}, alt='${image.alt}'></li>`)
-.join("")
+.map(({url, alt}) => `<li class="list_item">
+<img src="${url}", alt= "${alt}", width = "420", height= "300"/>
+</li>`)
+.join("");
 listGallery.insertAdjacentHTML("afterbegin", imagesEl)
 console.log(imagesEl)
 
-const styles = `<style> .gallery { display: flex; justify-content: space-around; align-items: center } </style>`;
+const styles = `<style> .gallery { display: flex; justify-content: space-around; align-items: center; list-style: none } </style>`;
 const headEl = document.querySelector("link");
 headEl.insertAdjacentHTML("afterend", styles)
