@@ -19,6 +19,7 @@ const handleClickIncrement = () => {
     counterValue.textContent = counter.value;
 }
 
+
 const decrementBtn = document.querySelector('button[data-action="decrement"]');
 const incrementBtn = document.querySelector('button[data-action="increment"]');
 
@@ -26,18 +27,19 @@ const incrementBtn = document.querySelector('button[data-action="increment"]');
 decrementBtn.addEventListener("click", handleClickDecrement);
 incrementBtn.addEventListener("click", handleClickIncrement);
 
-
 // let total = 0;
 // const handleClickDecrement = () => {
     
 //     if (total -= 1) {
 //        counterValue.textContent = total; 
-//     };
+//     } else {
+//     counterValue.textContent = 0 }
 //     console.log(total)
 // }
 // const handleClickIncrement = () => {
 //     if (total += 1) {
 //         counterValue.textContent = total
-//     };
+//     } else {
+//     counterValue.textContent = 0 }
 //     console.log(total)
 // }
