@@ -6,25 +6,38 @@ const btnCreate = document.querySelector('button[data-create]');
 const btnDestroy = document.querySelector('button[data-destroy]');
 const boxEl = document.querySelector("#boxes");
 
-const handleInput = evt => {
-  console.log(evt.currentTarget.value)
+let boxSize = 30;
+
+btnCreate.addEventListener("click", createHandle);
+btnDestroy.addEventListener("click", destroyHandle);
+
+function createHandle(amount) {
+  amount = controlsEl.value;
+  createBoxes(amount);
+}
+
+function createBoxes(amount) {
+  const boxList = [];
+  for (let i = 0; i < amount; i += 1) {
+    const boxMarkup = `<div style= "width: ${boxSize}px; 
+    height: ${boxSize}px; background-color: ${getRandomHexColor()}"></div>`;
+    boxSize+=10;
+    boxList.push(boxMarkup);
+  
+  } 
+  boxEl.insertAdjacentHTML("beforeend", boxList.join(""))
   
 }
-controlsEl.addEventListener("input", handleInput);
-
-const handleClick = (event) => {
-  console.log(event.currentTarget.value)
+function destroyHandle() {
+  boxEl.innerHTML = "";
+  controlsEl.value = "";
+  boxSize = 30;
 }
-btnCreate.addEventListener("click", handleClick);
-btnDestroy.removeEventListener("click", handleClick);
 
 
 
 
-// function createBoxes(amount) {
-//   const box = document.createElement("div");
-//   box.width = "30px";
-//   box.height = "30px";
-//   boxEl.append("box")
-// }
 
+
+ 
+  
