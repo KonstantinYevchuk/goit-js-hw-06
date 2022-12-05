@@ -1,8 +1,9 @@
-const catigoriesOfAnimals = document.querySelector('#categories');
-const listOfAnimalsRef = catigoriesOfAnimals.children.length;
-console.log(`Numbers of categories: ${listOfAnimalsRef}`);
+// const catigoriesOfAnimals = document.querySelector('#categories');
+// const listOfAnimalsRef = catigoriesOfAnimals.children.length;
+// console.log(`Numbers of categories: ${listOfAnimalsRef}`);
 
 const elements = document.querySelectorAll(".item")
+console.log(`Numbers of categories: ${elements.length}`)
 for (const element of elements) {
     const category = element.firstElementChild.textContent;
     console.log("Category: ", category);

@@ -5,7 +5,7 @@ console.log(outputEl)
 
 
 inputEl.addEventListener("input", (event) => {
-    if (event.currentTarget.value === "") {
+    if (event.currentTarget.value.trim() === "") {
        return outputEl.textContent = "Anomnius" 
     }
     outputEl.textContent = event.currentTarget.value;
