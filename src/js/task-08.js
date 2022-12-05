@@ -19,7 +19,7 @@ form.addEventListener("submit", evt => {
     const {email, password} = evt.currentTarget;
     
 
-    if (email.value === "" || password.value === "") {
+    if (email.value.trim() === "" || password.value.trim() === "") {
         alert("Please, fill all fields in this form")
     } else { 
         console.log(`Name: ${email.value} \n Password: ${password.value}`)

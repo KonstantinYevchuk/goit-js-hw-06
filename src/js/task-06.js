@@ -2,11 +2,11 @@ const inputEl = document.querySelector('#validation-input');
 console.log(inputEl)
 
 const removeFocus = () => {
-    if (inputEl.value.length <= inputEl.dataset.length) {
-        inputEl.classList.add('invalid')
+    inputEl.classList.remove('invalid', 'valid')
+    if (inputEl.value.length === Number(inputEl.dataset.length)) {
+        inputEl.classList.add('valid')
     } else {
-        inputEl.classList.remove('invalid')
-        inputEl.classList.add("valid")
+        inputEl.classList.add("invalid")
     }
 }
 inputEl.addEventListener("blur", removeFocus) 

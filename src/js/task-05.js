@@ -6,7 +6,7 @@ console.log(outputEl)
 
 inputEl.addEventListener("input", (event) => {
     if (event.currentTarget.value.trim() === "") {
-       return outputEl.textContent = "Anomnius" 
+       return outputEl.textContent = "Anonymous" 
     }
     outputEl.textContent = event.currentTarget.value;
 } )
